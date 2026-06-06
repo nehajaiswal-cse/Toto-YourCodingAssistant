@@ -2,7 +2,7 @@ import { useCodefix } from "../hooks/useCodefix";
 import ChatMessage from "./chatMessage";
 import ChatInput from "./chatInput";
 
-const fixChat = () => {
+const FixChat = () => {
   const { messages, fixcode, loading, error } = useCodefix();
  const prompts = [
   "Fix React component errors",
@@ -59,4 +59,4 @@ const fixChat = () => {
   );
 };
 
-export default fixChat;
+export default FixChat;

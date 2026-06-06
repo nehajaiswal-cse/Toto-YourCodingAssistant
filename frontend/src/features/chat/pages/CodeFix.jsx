@@ -1,5 +1,5 @@
 import Navbar from "../component/Navbar";
-import fixChat from "../component/codeFixchat";
+import FixChat from "../component/codeFixchat";
 import CodeEditor from "../component/Editor";
 import Preview from "../component/preview";
 import { useChat } from "../hooks/usechat";
@@ -35,7 +35,7 @@ const CodeFix = () => {
 
         {/* AI Chat */}
         <div className="border-r border-gray-800 flex flex-col min-h-0">
-          <fixChat />
+          <FixChat />
         </div>
 
         {/* Code Editor */}
