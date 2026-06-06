@@ -3,7 +3,7 @@ import { fixCode } from "../service/chatapi";
 import { ChatContext } from "../chatContext";
 import { createChat, updateChat } from "../service/chatHistoryapi";
 
-export const useCodeFix = () => {
+export const useCodefix = () => {
   const context = useContext(ChatContext);
 
   const {
