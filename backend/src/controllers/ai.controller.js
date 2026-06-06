@@ -1,4 +1,5 @@
 const generateResponse  = require("../Service/ai.service");
+const fixCodeWithAI = require("../Service/fixCodeAiService")
 const extractJSON = require("../utils/extractJSON");
 
 async function generateCodeController(req, res) {
@@ -14,7 +15,7 @@ async function generateCodeController(req, res) {
     }
 
     const aiText = await  generateResponse(prompt);
-    console.log("✅ FULL RESPONSE:", aiText);
+    console.log("FULL RESPONSE:", aiText);
     // const parsed = extractJSON(aiText);
 
     res.status(200).json({
@@ -32,4 +33,23 @@ async function generateCodeController(req, res) {
   }
 }
 
-module.exports = { generateCodeController };
+async function fixCode(req,res) {
+  try{
+    const{code}=req.body;
+    const result = await fixCodeWithAI(code);
+    res.status(200).json({
+      success:true,
+      data:result,
+    })
+  }
+  catch(err)
+  {
+   res.status(500).json({
+    success:false,
+    message:err.message,
+   })
+  }
+  
+}
+
+module.exports = {fixCode, generateCodeController };
