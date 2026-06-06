@@ -62,7 +62,7 @@ const DashboardHome = () => {
             className="group cursor-pointer p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl hover:scale-105 hover:border-green-400 transition duration-300"
           >
             <h2 className="text-xl font-semibold mb-3 text-green-400">
-              🛠 Code Correction
+               Code Correction
             </h2>
             <p className="text-gray-400 text-sm">
               Detect bugs and improve your code quality instantly
@@ -78,7 +78,7 @@ const DashboardHome = () => {
             className="group cursor-pointer p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl hover:scale-105 hover:border-yellow-400 transition duration-300"
           >
             <h2 className="text-xl font-semibold mb-3 text-yellow-400">
-              🚀 About Us
+              📚 About Us
             </h2>
             <p className="text-gray-400 text-sm">
               Learn more about Toto and how it helps developers grow
